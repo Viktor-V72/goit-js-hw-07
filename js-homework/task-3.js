@@ -18,17 +18,19 @@ const images = [
 
 const gallery = document.querySelector('#gallery');
 
+const insertImg = images.map(
+  item =>
+    `<li class = "gallery"><img src = "${item.url}" alt = "${item.alt} width ="200" ></li>`,
+);
 
-let string = ' ';
-for (let i = 0; i < images.length; i += 1) {
-    string += `<li class = "gallery"><img src = "${images[i].url}" alt = "${images[i].alt} width ="200" ></li>`;
-}
-
-gallery.insertAdjacentHTML('afterbegin', string);
-
+gallery.insertAdjacentHTML('afterbegin', insertImg);
 
 
 
+
+// for (let i = 0; i < images.length; i += 1) {
+//     string += `<li class = "gallery"><img src = "${images[i].url}" alt = "${images[i].alt} width ="200" ></li>`;
+// }
 
 
 

@@ -20,15 +20,18 @@ function createBoxes(amount) {
           '#' +
           (Math.random().toString(16) + '000000').substring(2, 8).toUpperCase();
         
-        let totalDiv = box.appendChild(div);
+        let totalDiv = box.append(div);
     }
 };
 
 function destroyBoxes() {
-    while (box.firstChild) {
-        box.firstChild.remove();
-    }
-}
+    inputNumber.value = '';
+    box.innerHTML = '';
+
+    // while (box.firstChild) {
+    //     box.firstChild.remove();
+    // }
+};
 
 
 
